@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta http-equiv="x-UA-compatible" content = " IE = edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./profCard.css" />
+    </head>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background: #f1f1f1;
+            font-family:Arial, Helvetica, sans-serif ;
+            box-sizing: border-box;
+        }
+        .card-container{
+            width: 300px;
+            height: 430px;
+            background: #FFF;
+            border-radius: 6px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%) ;
+            box-shadow: 0px 1px 10px 1px #000;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .upper-container{
+            height:150px;
+            background: #7F00FF;
+        }
+        .image-container{
+            background: #f1f1f1;
+            width: 80px;
+            height:80px;
+            border-radius: 50%;
+            padding: 5px;
+            transform: translate(100px,100px);
+        }
+        .image-container img{
+            background: #f1f1f1;
+            width: 80px;
+            height:80px;
+            border-radius: 50%;
+        }
+      
+            .lower-container{
+                height: 280px;
+                background: #FFF;
+                padding: 2px;
+                padding-top: 40px;
+                text-align: center;
+            }.lower-container h2,h3 p{
+                box-sizing: border-box;
+                line-height: .6;
+                font-weight: lighter;
+
+            }
+            .lower-container h3{
+                color:#7F00FF;
+                opacity: .6;
+                font-weight: bold;
+            }
+            .social-icon ul{
+
+position: absolute; 
+border-bottom: 35%; 
+left: 35%;
+ transform: translate(-40%, -40%);
+  display: flex;
+
+} .social-icon ul li{
+     list-style: none; 
+     margin: 0 12px;
+
+}
+.social-icon ul li .fab { 
+    font-size: 25px;
+     line-height: 20px;
+
+transition: .6s; 
+color: #000;
+
+} 
+.social-icon ul li a:hover{
+     color: #fff;
+
+}
+
+.social-icon ul li a{ 
+    position: relative; 
+    display: block; width: 25px;
+     box-shadow: 0 4px 8px rgba(0,0,0.2); 
+     transition: .4s;
+height: 35px;
+border-radius: 20%;
+background-color: Irgb(245, 243, 243);
+text-align: center;
+}
+
+.social-icon ul li a:hover{ transform: translate(0, -10%);
+
+} .social-icon ul li:nth-child(1) a:hover{ background-color: rgb(60, 132, 240);
+
+} .social-icon ul li:nth-child(2) a:hover{ background-color: rgb(247, 17, 208);
+
+} .social-icon ul li:nth-child(3) a:hover{ background-color: rgb(72, 255, 0);
+
+} .social-icon ul li:nth-child(4) a:hover{ background-color: rgb(0, 102, 255);
+
+} .social-icon ul li:nth-child(5) a:hover{ background-color: rgb(0, 0, 0);
+
+}
+
+.amathul{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.amathul a{
+    color: #2ba5eb;
+    width: 56px;
+    font-size: 35px;
+    transition: .3s linear;
+}
+.amathul a:hover{
+    color: blueviolet;
+}
+
+          
+            
+    </style>
+    <body>
+        <div class="card-container">
+            <div class="upper-container">
+                <div class="image-container">
+                    <img src="im/amathl.jpeg">
+                </div>
+            </div>
+            <div class = "lower-container">
+                <div>
+                    <h2>Amathul Shireen</h2>
+                    <h3>Engineer</h3>
+
+                    <div>
+                        <P>Upcomming fullstack developer</P>
+                    </div>
+                    <div>
+                        <P>PASSION MAKES ME WHO IAM</P>
+                    </div>
+                    <div class="amathul">
+
+                        <ul>
+                            <a href="#" class="fa fa-facebook-f"></a>
+                            <a href="#" class="fa fa-instagram"></a>
+                            <a href="#" class="fa fa-youtube"></a>
+                            <a href="#" class="fa fa-twitter"></a>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </body>
+</html>

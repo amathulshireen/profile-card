@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/images/search?q=LinkedIn%20Logo%20PNG&FORM=IQFRBA&id=96F1398D39D1EB4389790E16CFCA5F0FF6DA6FE5";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=5737f44dcc64135fJmltdHM9MTY4MTc3NjAwMCZpZ3VpZD0wNGZhOTc3Yy03NThjLTZkOTEtMGE1NS04NWI3NzE4YzZiMjUmaW5zaWQ9NTQ5Nw&ptn=3&hsh=3&fclid=04fa977c-758c-6d91-0a55-85b7718c6b25&u=a1L2ltYWdlcy9zZWFyY2g_cT1MaW5rZWRJbiUyMExvZ28lMjBQTkcmRk9STT1JUUZSQkEmaWQ9OTZGMTM5OEQzOUQxRUI0Mzg5NzkwRTE2Q0ZDQTVGMEZGNkRBNkZFNQ&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
